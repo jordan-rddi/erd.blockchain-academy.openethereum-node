@@ -1,0 +1,47 @@
+[parity]
+# Custom chain
+chain = "spec.json"
+# Parity continously syncs the chain
+mode = "active"
+# Blockchain and settings will be stored in ./data.
+base_path = "./data"
+# You will be identified as 'authority_node' amongst other nodes..
+identity = "authority_node"
+
+[network]
+# Network ID of the chain will be overridden to: 3807 (this is the value of 'EDF' in hex)
+id = 3807
+# Parity will listen for connections on port 30303
+port = 30303
+
+[rpc]
+# Allows Cross-Origin Requests from domain '*'.
+cors = ["*"]
+# Allow connections only using specified addresses.
+hosts = ["*"]
+apis = ["all"]
+interface = "0.0.0.0"
+
+[websockets]
+# Allows connecting from Origin '*'.
+origins = ["*"]
+# Allow connections only using specified addresses.
+hosts = ["*"]
+# Only selected APIs will be exposed over this interface.
+apis = ["all"]
+interface = "0.0.0.0"
+
+[ipc]
+# Parity will create an IPC socket at ./data/jsonrpc.ipc.
+path = "./data/jsonrpc.ipc"
+apis = ["all"]
+
+[account]
+# File at ./signer_password should contain passwords to unlock your accounts. One password per line.
+password = ["./signer_password"]
+
+[mining]
+# Account to sign consensus messages and issue blocks for non-PoW chains.
+engine_signer = "0xa66001530562410ad370e1c48a04512b9f436512"
+# New pending block will be created for all transactions (both local and external).
+reseal_on_txs = "all"
