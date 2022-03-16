@@ -1,5 +1,7 @@
 # Details
-This basic node configuration includes an existing account with a large amount of Ether.
+This node configuration is built for OpenEthereum. You can download the latest OpenEthereum client at: https://github.com/openethereum/openethereum/releases/latest
+
+This configuration includes an existing account with a large amount of Ether.
 
 Address: `0xa66001530562410Ad370E1C48a04512B9F436512`
 
